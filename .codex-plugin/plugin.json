@@ -17,7 +17,7 @@
   ],
   "skills": [
     "./cursor-team-kit/skills/thermo-nuclear-code-quality-review",
-    ".cursor-code/pstack/skills/unslop"
+    "./pstack/skills/unslop"
   ],
   "interface": {
     "displayName": "Cursor Codex by dv8",
