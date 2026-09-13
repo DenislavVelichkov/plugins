@@ -1,0 +1,35 @@
+{
+  "name": "cursor-codex",
+  "version": "0.1.1",
+  "description": "Two Cursor-derived skills tailored by dv8 for Codex: strict code quality review and writing cleanup.",
+  "author": {
+    "name": "Denis",
+    "url": "https://github.com/DenislavVelichkov"
+  },
+  "homepage": "https://github.com/DenislavVelichkov/plugins/tree/dv8/main/cursor-code",
+  "repository": "https://github.com/DenislavVelichkov/plugins",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "skills",
+    "code-review",
+    "writing"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Cursor Codex by dv8",
+    "shortDescription": "Personalized code quality review and writing cleanup.",
+    "longDescription": "A dv8-maintained Codex adaptation of thermo-nuclear-code-quality-review and unslop, maintained in cursor-code on the dv8/main branch of DenislavVelichkov/plugins.",
+    "developerName": "dv8",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Run a thermo-nuclear code quality review of my changes.",
+      "Use unslop to make this draft sound natural and direct."
+    ],
+    "brandColor": "#2563EB"
+  }
+}
