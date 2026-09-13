@@ -6,7 +6,7 @@
     "name": "Denis",
     "url": "https://github.com/DenislavVelichkov"
   },
-  "homepage": "https://github.com/DenislavVelichkov/plugins/tree/dv8/main/cursor-code",
+  "homepage": "https://github.com/DenislavVelichkov/plugins",
   "repository": "https://github.com/DenislavVelichkov/plugins",
   "license": "MIT",
   "keywords": [
@@ -15,11 +15,14 @@
     "code-review",
     "writing"
   ],
-  "skills": "./skills/",
+  "skills": [
+    "./cursor-team-kit/skills/thermo-nuclear-code-quality-review",
+    ".cursor-code/pstack/skills/unslop"
+  ],
   "interface": {
     "displayName": "Cursor Codex by dv8",
     "shortDescription": "Personalized code quality review and writing cleanup.",
-    "longDescription": "A dv8-maintained Codex adaptation of thermo-nuclear-code-quality-review and unslop, maintained in cursor-code on the dv8/main branch of DenislavVelichkov/plugins.",
+    "longDescription": "A dv8-maintained Codex adaptation of thermo-nuclear-code-quality-review and unslop, maintained in cursor-codex on the dv8/main branch of DenislavVelichkov/plugins.",
     "developerName": "dv8",
     "category": "Productivity",
     "capabilities": [
