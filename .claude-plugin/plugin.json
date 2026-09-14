@@ -1,0 +1,9 @@
+{
+  "name": "cursor-claude",
+  "description": "Cursor plugin skills, symlinked from ~/Projects/cursor so upstream pushes land automatically",
+  "version": "1.0.0",
+  "skills": [
+    "./cursor/team-kit/skills/thermo-nuclear-code-quality-review",
+    "./pstack/skills/unslop"
+  ]
+}
