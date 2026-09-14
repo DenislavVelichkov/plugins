@@ -1,6 +1,7 @@
 ---
 name: unslop
-description: Cut AI tells from any writing. Must always apply.
+description: Strip AI tells from prose and restore human voice. Use this skill proactively and automatically, without being asked, whenever you write, edit, rewrite, summarize or review any natural-language text - documentation, READMEs, code comments, commit messages, PR descriptions, issues, specs, release notes, emails, chat replies, blog posts, reports - and always before returning drafted or rewritten prose to the user. Also use it when the user says text sounds AI-generated, slop, robotic, generic or corporate, or asks to make writing sound human.
+disable-model-invocation: false
 ---
 
 # Unslop
