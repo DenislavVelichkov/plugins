@@ -1,9 +1,13 @@
 {
   "name": "cursor-claude",
-  "description": "Cursor plugin skills, symlinked from ~/Projects/cursor so upstream pushes land automatically",
+  "description": "Cursor plugin skills tuned for Claude Code: thermo-nuclear code quality review and unslop.",
   "version": "1.0.0",
   "skills": [
-    "./cursor/team-kit/skills/thermo-nuclear-code-quality-review",
+    "./cursor-team-kit/skills/thermo-nuclear-code-quality-review",
     "./pstack/skills/unslop"
-  ]
+  ],
+  "author": {
+    "name": "Denis Velichkov",
+    "url": "https://github.com/DenislavVelichkov"
+  }
 }

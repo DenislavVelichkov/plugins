@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "cursor-claude",
-  "description": "Cursor plugin skills, made installable in Claude Code. Skills are symlinked to ~/Projects/cursor so upstream pushes land automatically.",
+  "description": "Cursor plugin skills, tuned for Claude Code on the claud/main branch.",
   "owner": {
     "name": "Denis"
   },
@@ -9,7 +9,7 @@
     {
       "name": "cursor-claude",
       "source": "./",
-      "description": "Skills ported from the Cursor plugin repo — thermo-nuclear code quality review and unslop.",
+      "description": "Cursor plugin skills tuned for Claude Code: thermo-nuclear code quality review and unslop.",
       "category": "engineering",
       "keywords": [
         "cursor",
