@@ -1,7 +1,7 @@
 {
   "name": "cursor-claude",
   "description": "Cursor plugin skills tuned for Claude Code: thermo-nuclear code quality review and unslop.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "skills": [
     "./cursor-team-kit/skills/thermo-nuclear-code-quality-review",
     "./pstack/skills/unslop"
