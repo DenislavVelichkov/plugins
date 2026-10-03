@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "cursor-claude",
-  "description": "Cursor plugin skills, tuned for Claude Code on the claud/main branch.",
+  "description": "Cursor plugin skills, tuned for Claude Code on the dv8/main-claude branch.",
   "owner": {
     "name": "Denis"
   },
