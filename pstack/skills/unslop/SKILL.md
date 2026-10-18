@@ -2,7 +2,7 @@
 name: unslop
 description: Cuts AI tells from any writing. Must always apply.
 when_to_use: Use whenever writing or editing prose a person will read, such as replies, docs, READMEs, commit messages, PR bodies, and comments.
-disable-model-invocation: false
+disable-model-invocation: true
 ---
 
 # Unslop
