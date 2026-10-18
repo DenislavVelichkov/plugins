@@ -1,6 +1,6 @@
 {
   "name": "cursor-codex",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Two Cursor-derived skills tailored by dv8 for Codex: strict code quality review and writing cleanup.",
   "author": {
     "name": "Denis",
@@ -27,7 +27,8 @@
     "category": "Productivity",
     "capabilities": [
       "Read",
-      "Write"
+      "Write",
+      "Lifecycle hooks"
     ],
     "defaultPrompt": [
       "Run a thermo-nuclear code quality review of my changes.",

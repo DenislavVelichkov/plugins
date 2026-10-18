@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear|compact|fork",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 'UNSLOP ACTIVE: apply these rules to prose you write (replies, docs, comments, commit messages, PR bodies). Do not change code, code blocks, string literals, quoted text, command output, or file content outside what you were asked to edit.'; awk 'f>=2; /^---$/{f++}' \"${PLUGIN_ROOT}/pstack/skills/unslop/SKILL.md\"",
+            "timeout": 5,
+            "statusMessage": "Loading unslop rules..."
+          }
+        ]
+      }
+    ]
+  }
+}
