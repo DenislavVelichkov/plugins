@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear|compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 'UNSLOP ACTIVE: apply these rules to all prose you write this session.'; awk 'f>=2; /^---$/{f++}' \"${CLAUDE_PLUGIN_ROOT}/pstack/skills/unslop/SKILL.md\"",
+            "timeout": 5,
+            "statusMessage": "Loading unslop rules..."
+          }
+        ]
+      }
+    ]
+  }
+}
