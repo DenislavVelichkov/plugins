@@ -5,7 +5,7 @@ description: Cut AI tells from any writing. Must always apply.
 
 # Unslop
 
-Edit text to remove AI patterns.
+Edit text to remove AI patterns. Apply these rules to prose you write (replies, docs, comments, commit messages, PR bodies). Do not change code, code blocks, string literals, quoted text, command output, or file content outside what you were asked to edit.
 
 ## Process
 
