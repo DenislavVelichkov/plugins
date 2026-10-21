@@ -1,6 +1,6 @@
 ---
 name: unslop
-description: Cut AI tells from any writing. Must always apply.
+description: Removes AI writing patterns from prose. Use when editing text or composing replies, documentation, comments, commit messages, or PR descriptions. Preserves meaning and excludes code and quoted material.
 ---
 
 # Unslop
@@ -11,7 +11,7 @@ Edit text to remove AI patterns. Apply these rules to prose you write (replies, 
 
 1. Scan for the patterns below.
 2. Rewrite. Preserve meaning, match intended tone.
-3. Self-audit: "What makes this obviously AI generated?" Fix remaining tells.
+3. Check the revision against the original meaning, facts, uncertainty, and requested tone. Fix remaining patterns without inventing sources, actors, or measurements. Preserve a necessary qualification when no evidence supports a stronger claim.
 
 ## Patterns to detect and fix
 
