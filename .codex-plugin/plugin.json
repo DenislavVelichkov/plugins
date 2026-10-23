@@ -1,6 +1,6 @@
 {
   "name": "cursor-codex",
-  "version": "0.2.1+codex.20261021skilloptimizer",
+  "version": "0.2.1+codex.20261024upstream",
   "description": "Two Cursor-derived skills tailored by dv8 for Codex: strict code quality review and writing cleanup.",
   "author": {
     "name": "Denis",
