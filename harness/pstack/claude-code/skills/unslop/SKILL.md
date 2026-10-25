@@ -6,7 +6,13 @@ disable-model-invocation: true
 
 # Unslop
 
-Edit text to remove AI patterns. Scan for the patterns below, then rewrite. Preserve meaning and match the intended tone.
+Edit text to remove AI patterns. Apply these rules to prose you write (replies, docs, comments, commit messages, PR bodies). Do not change code, code blocks, string literals, quoted text, command output, or file content outside what you were asked to edit.
+
+## Process
+
+1. Scan for the patterns below.
+2. Rewrite. Preserve meaning, match intended tone.
+3. Check the revision against the original meaning, facts, uncertainty, and requested tone. Fix remaining patterns without inventing sources, actors, or measurements. Preserve a necessary qualification when no evidence supports a stronger claim.
 
 ## Patterns to detect and fix
 
