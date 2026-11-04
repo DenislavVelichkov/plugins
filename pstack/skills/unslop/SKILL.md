@@ -1,7 +1,6 @@
 ---
 name: unslop
-description: Cuts AI tells from any writing. Must always apply.
-when_to_use: Use whenever writing or editing prose a person will read, such as replies, docs, READMEs, commit messages, PR bodies, and comments.
+description: Cuts AI tells from prose. The plugin's SessionStart hook (hooks/hooks.json) injects these rules into every session; invoke /unslop to apply them to a specific text.
 disable-model-invocation: true
 ---
 
@@ -14,6 +13,7 @@ Edit text to remove AI patterns. Apply these rules to prose you write (replies, 
 1. Scan for the patterns below.
 2. Rewrite. Preserve meaning, match intended tone.
 3. Check the revision against the original meaning, facts, uncertainty, and requested tone. Fix remaining patterns without inventing sources, actors, or measurements. Preserve a necessary qualification when no evidence supports a stronger claim.
+4. For a text the user supplies, return the revised text in the reply, or write it back to the file they named. List the changes only when asked or when a change alters a claim.
 
 ## Patterns to detect and fix
 
@@ -21,7 +21,7 @@ Rule numbers are stable ids that other skills cite. A removed rule leaves a gap.
 
 ### Content
 
-3. **Superficial -ing phrases.** "highlighting...", "ensuring...", "reflecting...", "showcasing...", "fostering...". Delete or expand with real sources.
+3. **Superficial -ing phrases.** "highlighting...", "ensuring...", "reflecting...", "showcasing...", "fostering...". Delete the phrase, or replace it with the concrete consequence it gestures at.
 5. **Vague attributions.** "Experts believe", "Industry reports suggest", "Some critics argue". Name the source or delete.
 
 ### Language
@@ -35,8 +35,8 @@ Rule numbers are stable ids that other skills cite. A removed rule leaves a gap.
 
 ### Style
 
-13. **Em dash overuse.** Avoid em dashes entirely. Use periods or commas only (no parentheses, no en dashes, no hyphen-as-dash substitutes). If a thought needs separation, end the sentence or use a comma.
-14. **Colon overuse.** Colons are fine before a list or example, not as mid-sentence connectors. "If you're coming from traditional automation: instead of registering event handlers, you describe conditions" adds nothing with the colon. Rewrite to let the point stand on its own without comparison framing. "Describing when the scheduler should fire works best as plain English." Same meaning, no crutch punctuation.
+13. **Em dash overuse.** Do not use em dashes, en dashes, or hyphens as clause separators. If a thought needs separation, end the sentence or use a comma. Parentheses are fine for a short gloss.
+14. **Colon overuse.** Colons are fine before a list or example, not as mid-sentence connectors. "If you're coming from traditional automation: instead of registering event handlers, you describe conditions" adds nothing with the colon. "Instead of registering event handlers, you describe conditions." Same meaning, no crutch punctuation.
 15. **Boldface overuse.** Don't bold every proper noun or acronym.
 16. **Inline-header lists.** The tell is a bold label and colon that restates the line: "**Performance:** Performance improved...". Convert those to prose. A bold lead-in that ends in a period, names the item, and is followed by genuinely new detail ("**Schema in TypeScript.** Tables live in one file.") is fine, not a tell.
 17. **Title case headings.** Use sentence case.
@@ -56,11 +56,11 @@ Rule numbers are stable ids that other skills cite. A removed rule leaves a gap.
 
 ### Jargon
 
-26. **Abstract metaphor nouns.** Substrate (base), wedge, wedge in (add), vector (way, method), locus, vantage, nexus, primitive as a noun, harness as a metaphor, surface as in "API surface", bedrock, scaffolding as a metaphor, modality, paradigm, gold-plating (more than the job needs), ratchet as a metaphor (the mechanism's real name, or a limit that only tightens), evacuate for moving code (move out), endgame (the last phase), north star, flywheel. These read as technical but usually have a plainer concrete word. Pick the concrete word.
+26. **Abstract metaphor nouns.** Substrate (base), wedge, wedge in (add), vector (way, method), locus, vantage, nexus, primitive as a noun, harness as a metaphor, surface as in "API surface" (unless the project already uses it as a defined term), bedrock, scaffolding as a metaphor, modality, paradigm, gold-plating (more than the job needs), ratchet as a metaphor (the mechanism's real name, or a limit that only tightens), evacuate for moving code (move out), endgame (the last phase), north star, flywheel. These read as technical but usually have a plainer concrete word. Pick the concrete word.
 
 ### Plain speech
 
-27. **Say what it does, not how it feels.** "the database stays close at hand", "SQL you can read", "types that follow your schema" name a feeling. The fix names the mechanism or a number: "`.toSQL()` returns the exact string sent to the database", "a column rename fails the build". Ask what the sentence tells the reader to do or know, then write that. If you can't restate it as a concrete instruction, fact, or number, cut it. One more check: if the sentence could appear unchanged in another project's docs, it says nothing about this one. Cut it.
+27. **Say what it does, not how it feels.** "the database stays close at hand", "SQL you can read", "types that follow your schema" name a feeling. The fix names the mechanism or a number: "`.toSQL()` returns the exact string sent to the database", "a column rename fails the build". If you can't restate a sentence as a concrete instruction, fact, or number, cut it. A sentence that could appear unchanged in another project's docs says nothing about this one: cut it only when it adds no instruction, fact, or qualification. Portability alone is not a reason to cut.
 28. **Shorten or split dense sentences.** If the reader has to backtrack to parse a sentence, break it in two or drop clauses. One idea per sentence.
 29. **Active voice.** Prefer it. Catch "is/are/was/were + past participle" and name the actor: "queries are validated" becomes "the compiler validates queries", "the file is parsed by the loader" becomes "the loader parses the file". Passive is fine only when the actor is unknown or genuinely doesn't matter.
 30. **Cut adverbs, or use a stronger verb.** "runs quickly" becomes "is fast" or the number, and "significantly improves" becomes the measured delta. An adverb propping up a weak verb means the verb is wrong.
